@@ -1,0 +1,109 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+  background-color: #f6d280;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand, .nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .nav-link {
+  color: #ffb400;
+}
+
+.navbar-dark .nav-link:hover, .navbar-dark .nav-link:focus {
+  color: #ffffff;
+}
+
+/* Gaya untuk tampilan gambar dalam card */
+.card-img { /* Pastikan gambar memenuhi ukuran card */
+  object-fit: contain; /* Memastikan gambar ditampilkan sepenuhnya tanpa terpotong */
+  object-position: center;
+  height: 700px;
+  width: 600px;
+}
+
+.carousel-item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.authentic {
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.authentic:hover {
+  border-bottom: 3px solid #fff;
+  background-color: transparent;
+}
+
+/* Custom button styles */
+.btn-custom {
+  background-color: #ffb400;
+  border-color: #ffb400;
+  color: #ffffff;
+}
+
+.btn-custom:hover {
+  background-color: #e6a700;
+  border-color: #e6a700;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.footer a {
+  color: #ffb400;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Card Styling */
+.card {
+  transition: transform .5s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .card-img-top {
+    height: 300px;
+  }
+  .carousel-item img {
+    max-height: 300px;
+  }
+}
+
+.before-login {
+  display: block; /* Tampilkan elemen ini secara default */
+}
+.after-user-login, .after-admin-login {
+  display: none; /* Sembunyikan elemen ini secara default */
+}

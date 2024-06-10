@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Batik Essence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Masuk ke Batik Essence</h2>
+    <form action="/submit-your-login-form" onsubmit="return login()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required placeholder="Masukkan Username Anda">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required placeholder="Masukkan Password Anda">
+      <button type="submit">Login</button>
+    </form>
+    <div class="extra-options">
+      <a href="#">Lupa Password?</a>
+      <p>Belum punya akun? <a href="/register">Daftar sekarang</a></p>
+    </div>
+  </div>
+
+  <script>
+   function login() {
+  // Proses login di sini
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  // Contoh validasi sederhana untuk admin
+  if (username === "admin" && password === "admin123") {
+    // Redirect ke halaman admin setelah login berhasil
+    window.location.href = "../index.html";
+    return false; // Untuk mencegah form disubmit secara default
+  }
+
+  // Contoh validasi sederhana untuk user
+  if (username === "user" && password === "user123") {
+    // Redirect ke halaman user setelah login berhasil
+    window.location.href = "../index.html";
+    return false; // Untuk mencegah form disubmit secara default
+  }
+
+  // Jika username dan password tidak cocok dengan admin atau user
+  alert("Username atau password salah!");
+  return false; // Untuk mencegah form disubmit secara default
+}
+
+    
+  </script>
+</body>
+</html>
